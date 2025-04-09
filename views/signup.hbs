@@ -1,0 +1,48 @@
+{{> layout}}
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card shadow-lg p-4" style="max-width: 450px; width: 100%;">
+        <div class="card-body">
+            <h2 class="text-center mb-4">Crear cuenta</h2>
+            <p class="text-center">Regístrate para comenzar a usar la app</p>
+            
+            <form method="POST" action="/signup">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="••••••••" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="confirmPassword" class="form-label">Confirmar contraseña</label>
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="••••••••" required>
+                </div>
+
+                <div class="d-grid mb-3">
+                    <button type="submit" class="btn btn-success">Registrarme</button>
+                </div>
+
+                {{#if error}}
+                    <div class="alert alert-danger text-center">
+                        {{error}}
+                    </div>
+                {{/if}}
+
+                <div class="text-center">
+                    <small class="text-muted">
+                        ¿Ya tienes una cuenta? <a href="/login">Inicia sesión</a>
+                    </small>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,102 @@
+{{> layout}}
+
+<style>
+    body {
+        background-color: #0f0f0f;
+        color: #f5f5f5;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .profile-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+    }
+
+    .card-glass {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+        transition: transform 0.3s;
+    }
+
+    .card-glass:hover {
+        transform: translateY(-5px);
+    }
+
+    .avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #fff;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .info-label {
+        font-size: 0.9rem;
+        color: #aaa;
+    }
+
+    .info-value {
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+
+    .edit-btn {
+        background-color: #ffffff10;
+        border: 1px solid #ffffff30;
+        color: #fff;
+        transition: all 0.2s;
+    }
+
+    .edit-btn:hover {
+        background-color: #ffffff20;
+        border-color: #ffffff50;
+    }
+</style>
+
+<h4 class="text-white">
+    Disclaimer: este es un perfil falso que solamente ejemplifica la manera 
+    en que la información será mostrada en la página real.
+</h4>
+<div class="profile-container">
+    <div class="card-glass d-flex flex-column flex-md-row align-items-center gap-4">
+        <div class="text-center">
+            <img src="https://i.pravatar.cc/150?img=45" alt="Avatar" class="avatar mb-3">
+            <h3 class="mb-0">Alex Martínez</h3>
+            <small class="text-muted">Usuario desde enero 2024</small>
+        </div>
+
+        <div class="w-100">
+            <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <div class="info-label">Correo electrónico</div>
+                    <div class="info-value">alex.martinez@example.com</div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <div class="info-label">Rol</div>
+                    <div class="info-value">Paciente</div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <div class="info-label">Edad</div>
+                    <div class="info-value">28 años</div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <div class="info-label">Pronombres</div>
+                    <div class="info-value">Él / Él</div>
+                </div>
+                <div class="col-12 mb-3">
+                    <div class="info-label">Bio</div>
+                    <div class="info-value">Amante del cine, la introspección y los espacios seguros.</div>
+                </div>
+                <div class="col-12">
+                    <a href="/editar-perfil" class="btn edit-btn w-100 mt-3">Editar perfil</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

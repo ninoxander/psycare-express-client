@@ -1,0 +1,22 @@
+{{> layout}}
+<div class="container">
+    <h1 class="text-center">
+        Existen {{count}} registros en el endpoint test.
+    </h1>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 mt-4">
+        {{#each tests}}
+            <div class="col">
+                <div class="card h-100 shadow-sm bg-secondary">
+                    <div class="card-body text-white">
+                        <h5 class="card-titl">{{title}}</h5>
+                        <p class="card-text">{{description}}</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        {{date}}
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

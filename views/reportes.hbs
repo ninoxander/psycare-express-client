@@ -1,0 +1,81 @@
+{{> layout}}
+
+<div class="container support-container">
+    <h1 class="text-center mb-4 fw-bold">📩 Centro de Soporte</h1>
+
+    {{!-- Formulario para nuevo reporte --}}
+    <div class="card shadow-sm mb-5">
+        <div class="card-body">
+            <h5 class="card-title">¿Tienes un problema o sugerencia?</h5>
+            <p class="text-muted">Completa el siguiente formulario para enviar tu reporte.</p>
+
+            <form>
+                <div class="mb-3">
+                    <label for="type" class="form-label">Tipo de reporte</label>
+                    <select class="form-select" id="type">
+                        <option>🛠️ Problema técnico</option>
+                        <option>💡 Sugerencia</option>
+                        <option>🔐 Problema con mi cuenta</option>
+                        <option>📄 Otro</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label">Descripción del problema</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Cuéntanos qué pasó o qué idea tienes..."></textarea>
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-dark">Enviar reporte</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {{!-- Mockup de reportes enviados --}}
+    <h4 class="mb-3">📋 Mis reportes anteriores</h4>
+
+    <div class="report-entry card border-start border-info shadow-sm mb-3">
+        <div class="card-body">
+            <h6 class="card-title">💡 Sugerencia - 04 abril 2025</h6>
+            <p class="card-text">Sería útil tener un resumen semanal de emociones en forma de gráfico.</p>
+            <span class="badge bg-success">Estado: Resuelto</span>
+        </div>
+    </div>
+
+    <div class="report-entry card border-start border-warning shadow-sm mb-3">
+        <div class="card-body">
+            <h6 class="card-title">🛠️ Problema técnico - 02 abril 2025</h6>
+            <p class="card-text">No puedo editar un registro emocional después de guardarlo.</p>
+            <span class="badge bg-warning text-dark">Estado: En revisión</span>
+        </div>
+    </div>
+
+    <div class="report-entry card border-start border-secondary shadow-sm mb-3">
+        <div class="card-body">
+            <h6 class="card-title">📄 Otro - 31 marzo 2025</h6>
+            <p class="card-text">¿Pueden agregar un modo oscuro a la plataforma?</p>
+            <span class="badge bg-secondary">Estado: Recibido</span>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #f5f7fa;
+    }
+
+    .support-container {
+        max-width: 800px;
+        margin: 3rem auto;
+    }
+
+    .card-title {
+        font-weight: 600;
+    }
+
+    .report-entry:hover {
+        transform: scale(1.01);
+        transition: all 0.2s ease;
+    }
+</style>

@@ -13,6 +13,8 @@ var loginRouter = require('./routes/login');
 var signupRouter = require('./routes/signup');
 var profileRouter = require('./routes/perfil');
 var diarioRouter = require('./routes/diario');
+var reportesRouter = require('./routes/reportes');
+
 var app = express();
 
 // view engine setup
@@ -37,6 +39,8 @@ app.use('/login', loginRouter);
 app.use('/signup', signupRouter);
 app.use('/perfil', profileRouter);
 app.use('/diario', diarioRouter);
+app.use('/soporte', reportesRouter);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

@@ -1,0 +1,108 @@
+{{> layout}}
+
+<div class="container diario-container">
+    <h1 class="mb-4 text-center fw-bold">📝 Mi Diario Emocional</h1>
+
+    {{!-- Formulario para nueva entrada --}}
+    <div class="card shadow-sm mb-5">
+        <div class="card-body">
+            <h5 class="card-title mb-3">¿Cómo te sentiste hoy?</h5>
+            <form>
+                <div class="mb-3">
+                    <label for="emotion" class="form-label">Emoción</label>
+                    <select class="form-select" id="emotion">
+                        <option>😊 Feliz</option>
+                        <option>😞 Triste</option>
+                        <option>😡 Enojado</option>
+                        <option>😌 Tranquilo</option>
+                        <option>😰 Ansioso</option>
+                        <option>🤩 Emocionado</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="intensity" class="form-label">Intensidad (1 a 10)</label>
+                    <input type="number" class="form-control" id="intensity" min="1" max="10" value="5">
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-label">Descripción</label>
+                    <textarea class="form-control" id="description" rows="3" placeholder="¿Qué pasó hoy?"></textarea>
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">Guardar entrada</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {{!-- Mockup de entradas del diario --}}
+    <div class="diario-entry">
+        <div class="diario-header mb-2">
+            <span class="diario-emotion text-primary">😊 Feliz</span>
+            <small class="text-muted">05 abril 2025</small>
+        </div>
+        <p class="mb-1"><strong>Intensidad:</strong> 8/10</p>
+        <p>Hoy me sentí muy conectado con mis metas. Todo fluyó con naturalidad y recibí buenas noticias.</p>
+    </div>
+
+    <div class="diario-entry border-start border-success">
+        <div class="diario-header mb-2">
+            <span class="diario-emotion text-success">😌 Tranquilo</span>
+            <small class="text-muted">04 abril 2025</small>
+        </div>
+        <p class="mb-1"><strong>Intensidad:</strong> 6/10</p>
+        <p>Tuve un día muy relajado. Caminé por el parque y desconecté del celular por un rato.</p>
+    </div>
+
+    <div class="diario-entry border-start border-danger">
+        <div class="diario-header mb-2">
+            <span class="diario-emotion text-danger">😞 Triste</span>
+            <small class="text-muted">03 abril 2025</small>
+        </div>
+        <p class="mb-1"><strong>Intensidad:</strong> 4/10</p>
+        <p>Extrañé a una persona importante. Fue un día lento emocionalmente, pero escribí para soltar un poco.</p>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .diario-container {
+        max-width: 800px;
+        margin: 3rem auto;
+    }
+
+    .diario-entry {
+        background-color: #fff;
+        border-left: 6px solid #4e73df;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.2s ease;
+    }
+
+    .diario-entry:hover {
+        transform: translateY(-4px);
+    }
+
+    .diario-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .diario-emotion {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .card-title {
+        font-weight: 600;
+    }
+</style>
